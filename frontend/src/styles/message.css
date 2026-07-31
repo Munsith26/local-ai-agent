@@ -1,0 +1,178 @@
+/* ===========================
+   Message Row
+=========================== */
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.message-row.ai {
+  justify-content: flex-start;
+}
+
+/* ===========================
+   Message Card
+=========================== */
+
+.message-card {
+  max-width: 420px;
+
+  width: fit-content;
+
+  min-width: 100px;
+}
+
+/* User */
+
+.message-row.user .message-card {
+  background: #ffffff;
+  color: #170101;
+  border-bottom-right-radius: 20px;
+  margin-right: 250px;
+}
+
+/* AI */
+
+.message-row.ai .message-card {
+  background: #f5f5f5;
+  color: #111;
+  border-bottom-left-radius: 6px;
+  margin-left: 250px;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 0px;
+}
+
+.author {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.message-row.user .author {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.message-row.ai .author {
+  color: #666;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===========================
+   Tool Badge
+=========================== */
+
+.tool-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+}
+
+.message-row.ai .tool-chip {
+  background: white;
+  border: 1px solid #ddd;
+  color: #666;
+}
+
+.message-row.user .tool-chip {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* ===========================
+   Copy Button
+=========================== */
+
+.copy-btn {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.message-row.ai .copy-btn {
+  color: #666;
+}
+
+.message-row.user .copy-btn {
+  color: white;
+}
+
+.copy-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* ===========================
+   Message Content
+=========================== */
+
+.message-content {
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: inherit;
+
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.message-content p {
+  margin: 0 0 12px;
+}
+
+.message-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===========================
+   Code Blocks
+=========================== */
+
+.message-content pre {
+  margin-top: 14px;
+
+  border-radius: 10px;
+
+  overflow: auto;
+}
+
+.message-content code {
+  background: rgba(0, 0, 0, 0.06);
+
+  padding: 2px 6px;
+
+  border-radius: 4px;
+
+  font-size: 13px;
+}

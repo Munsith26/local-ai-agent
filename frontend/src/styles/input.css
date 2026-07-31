@@ -1,0 +1,166 @@
+/* ===========================
+   Input Wrapper
+=========================== */
+
+.input-wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 16px 24px;
+
+  background: #fff;
+
+  border-top: 1px solid #e5e5e5;
+
+  flex-shrink: 0;
+}
+
+/* Welcome screen */
+
+.input-wrapper.welcome-mode {
+  background: transparent;
+  border-top: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* ===========================
+   Input Box
+=========================== */
+
+.chat-input {
+  width: 100%;
+  max-width: 760px;
+  min-height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  background: #fff;
+
+  border: 1px solid #dcdcdc;
+  border-radius: 18px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.chat-input:focus-within {
+  border-color: #111;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ===========================
+   Text Input
+=========================== */
+
+.chat-input input {
+  flex: 1;
+
+  height: 56px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  padding: 0 18px;
+
+  font-size: 15px;
+  color: #111;
+}
+
+.chat-input input::placeholder {
+  color: #888;
+}
+
+/* ===========================
+   Send Button
+=========================== */
+
+.chat-input button {
+  width: 42px;
+  height: 42px;
+
+  margin-right: 8px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #111;
+  color: #fff;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s;
+}
+
+.chat-input button:hover {
+  background: #333;
+}
+
+.chat-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   Quick Actions
+=========================== */
+
+.quick-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 16px;
+}
+
+.pill-btn {
+  padding: 10px 18px;
+
+  border: 1px solid #ddd;
+  border-radius: 999px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.pill-btn:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .input-wrapper {
+    padding: 12px;
+  }
+
+  .chat-input {
+    max-width: 100%;
+  }
+
+  .chat-input input {
+    font-size: 14px;
+  }
+}

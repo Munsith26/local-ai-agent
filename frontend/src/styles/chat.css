@@ -1,0 +1,111 @@
+/* ===========================
+   Welcome Screen
+=========================== */
+
+.welcome {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+}
+
+.welcome-content {
+  width: 100%;
+  max-width: 760px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.welcome-icon {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+
+  background: white;
+
+  font-size: 42px;
+
+  margin-bottom: 24px;
+}
+
+.welcome h1 {
+  font-size: 46px;
+  font-weight: 700;
+  color: #111;
+
+  margin-bottom: 14px;
+}
+
+.welcome p {
+  font-size: 17px;
+  color: #666;
+
+  margin-bottom: 40px;
+}
+
+/* ===========================
+   Chat Window
+=========================== */
+
+.chat-window {
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 30px 0;
+
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   Message Container
+=========================== */
+
+.chat-window .message {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto 22px auto;
+
+  padding: 0 24px;
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+.chat-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 20px;
+}
+
+.chat-window::-webkit-scrollbar-thumb:hover {
+  background: #bfbfbf;
+}
